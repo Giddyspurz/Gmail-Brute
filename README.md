@@ -1,4 +1,4 @@
-GMAIL-BRUTE
+#GMAIL-BRUTE
 
 A Tool For Bruteforcing Gmail Accounts
 
