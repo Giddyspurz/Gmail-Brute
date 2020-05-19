@@ -50,6 +50,7 @@ def connect_gmail(user, password):
 		smtpserver.login(user, password)
 		print(colored("[+] Password Found: %s" % password, "green"))
 		file = open(password.txt,"w")
+                file = close()
 
 
 	except smtplib.SMTPAuthenticationError:
